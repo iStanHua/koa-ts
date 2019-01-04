@@ -1,0 +1,48 @@
+{
+  "name": "koa-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "start": "ts-node app.ts",
+    "serve": "./node_modules/.bin/nodemon app.ts",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "pm2": "pm2 start app.json"
+  },
+  "author": "",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "koa-bodyparser":"^4.2.1",
+    "koa-convert":"^1.2.0",
+    "koa-cors":"^0.0.16",
+    "koa-helmet":"^4.0.0",
+    "koa-favicon":"^2.0.1",
+    "koa-static":"^5.0.0",
+    "koa-json":"^2.0.2",
+    "knex":"^0.16.3",
+    "mysql":"^2.16.0",
+    "log4js":"^3.0.6",
+    "request":"^2.88.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.36",
+    "@types/koa-bodyparser":"^4.2.1",
+    "@types/koa-convert":"^1.2.1",
+    "@types/koa-cors":"^0.0.0",
+    "@types/koa-helmet":"^3.1.2",
+    "@types/koa-favicon":"^2.0.19",
+    "@types/koa-static":"^4.0.0",
+    "@types/koa-json":"^2.0.18",
+    "@types/knex":"^0.15.1",
+    "@types/mysql":"^2.15.5",
+    "@types/log4js":"^2.3.5",
+    "@types/request":"^2.48.1",
+    "@types/node": "^10.12.18",
+    "nodemon": "^1.18.9",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  }
+}

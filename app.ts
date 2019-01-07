@@ -12,8 +12,10 @@ import log4js from 'log4js'
 
 import configs from './config'
 import errorInfo from './app/extends/errorInfo'
+import response from './app/middlewares/response'
+import routes from './app/routes'
 
-const app = new Koa();
+const app = new Koa()
 
 app.use(bodyparser({
   enableTypes: ['json', 'form', 'text']
@@ -23,6 +25,13 @@ app.use(json())
 app.use(convert(cors()))
 app.use(convert(favicon(__dirname + '/public/logo.jpg')))
 app.use(convert(Static(__dirname + '/public')))
+
+// router
+.use(routes.routes())
+.use(routes.allowedMethods())
+
+app.use(response)
+
 
 // logger
 app.use(async (ctx, next) => {
